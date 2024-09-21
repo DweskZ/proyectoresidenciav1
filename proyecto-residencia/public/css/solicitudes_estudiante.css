@@ -1,0 +1,165 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Menú lateral (sidebar) */
+.sidebar {
+    background-color: #005BA2; /* Azul para mantener la coherencia */
+    color: white;
+    padding: 20px;
+    width: 250px;
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    background-color: transparent;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar ul li a.active {
+    background-color: #D71920; /* Fondo rojo para el enlace activo */
+    color: white;
+}
+
+.sidebar ul li a:hover {
+    background-color: #005BA2;
+    color: white;
+}
+
+/* Contenido principal */
+.main-content {
+    flex-grow: 1;
+    padding: 40px;
+    background-color: #f4f4f9;
+}
+
+/* Encabezado */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+header button {
+    padding: 10px 20px;
+    background-color: #D71920; /* Rojo para mantener coherencia con los botones */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+header button:hover {
+    background-color: #005BA2;
+}
+
+/* Tabla de solicitudes */
+.solicitudes-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.solicitudes-table th, .solicitudes-table td {
+    padding: 15px;
+    text-align: left;
+}
+
+.solicitudes-table th {
+    background-color: #005BA2;
+    color: white;
+}
+
+.solicitudes-table td {
+    border-bottom: 1px solid #ccc;
+}
+
+.solicitudes-table tbody tr:nth-child(even) {
+    background-color: #f4f4f9;
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .sidebar ul li {
+        margin: 10px 0;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    header button {
+        font-size: 12px;
+        padding: 8px 15px;
+    }
+}
+
+/* Estilos para pantallas muy pequeñas (móviles) */
+@media (max-width: 480px) {
+    .main-content {
+        padding: 10px;
+    }
+
+    .sidebar ul li {
+        font-size: 14px;
+    }
+
+    .sidebar h2 {
+        font-size: 16px;
+    }
+
+    header h1 {
+        font-size: 18px;
+    }
+}

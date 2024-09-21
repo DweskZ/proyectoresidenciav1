@@ -1,0 +1,166 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /* Contenedor principal */
+  .container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  /* Menú lateral (sidebar) */
+  .sidebar {
+    background-color: #005BA2;
+    color: white;
+    padding: 20px;
+    width: 250px;
+  }
+  
+  .sidebar h2 {
+    margin-bottom: 20px;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .sidebar ul li {
+    margin-bottom: 15px;
+  }
+  
+  .sidebar ul li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    background-color: transparent;
+    border-radius: 5px;
+    font-size: 14px; /* Ajuste de tamaño para evitar desbordes */
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .sidebar ul li a.active {
+    background-color: #D71920; /* Fondo rojo para el enlace activo */
+    color: white;
+  }
+  
+  .sidebar ul li a:hover {
+    background-color: #005BA2;
+    color: white;
+  }
+  
+  /* Contenido principal */
+  .main-content {
+    flex-grow: 1;
+    padding: 40px;
+    background-color: #f4f4f9;
+  }
+  
+  header h1 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Tarjetas de estadísticas */
+  .stat-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+    border: 1px solid #E0E0E0;
+    margin: 10px 0;
+  }
+  
+  .stat-card h3 {
+    color: #005BA2;
+    margin-bottom: 10px;
+  }
+  
+  .stat-card p {
+    font-size: 24px;
+    font-weight: bold;
+    color: #D71920;
+  }
+  
+  /* Ajuste del tamaño de las tarjetas */
+  .stats {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .stat-card {
+    flex: 1 1 30%; /* Cada tarjeta ocupa el 30% del ancho */
+  }
+  
+  /* Actividad reciente */
+  .recent-activity {
+    margin-top: 40px;
+  }
+  
+  .recent-activity h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Botones */
+  button {
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #D71920;
+  }
+  
+  /* Estilos para pantallas pequeñas */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column; /* Apilar el menú lateral sobre el contenido */
+    }
+  
+    .sidebar {
+      width: 100%;
+      padding: 10px;
+      text-align: center;
+    }
+  
+    .sidebar ul li {
+      margin: 10px 0; /* Reducir espacio en el menú */
+    }
+  
+    .main-content {
+      padding: 20px;
+    }
+  
+    .stat-card {
+      margin-bottom: 20px;
+    }
+  }
+  
+  /* Estilos para pantallas muy pequeñas (móviles) */
+  @media (max-width: 480px) {
+    .main-content {
+      padding: 10px;
+    }
+  
+    .sidebar ul li {
+      font-size: 14px;
+    }
+  
+    .sidebar h2 {
+      font-size: 16px;
+    }
+  
+    .stat-card {
+      font-size: 14px;
+      padding: 10px;
+    }
+  }
+  

@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #D71920, #005BA2); /* Degradado rojo y azul */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .login-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .login-container img.logo {
+    width: 180px;
+    margin-bottom: 20px;
+  }
+  
+  .login-container h1 {
+    color: #D71920;
+    margin-bottom: 20px;
+  }
+  
+  .login-container h2 {
+    color: #005BA2;
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  
+  .login-container input[type="text"],
+  .login-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .login-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #005BA2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .login-container button:hover {
+    background-color: #D71920;
+  }
+  
+  .login-container a {
+    display: block;
+    margin-top: 15px;
+    color: #005BA2;
+    text-decoration: none;
+  }
+  

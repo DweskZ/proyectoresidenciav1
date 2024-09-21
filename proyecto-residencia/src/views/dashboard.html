@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Administrador</title>
+  <link rel="stylesheet" href="/css/dashboard.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Menú lateral -->
+    <aside class="sidebar">
+      <h2>Gestión de Residencia</h2>
+      <ul>
+        <li><a href="/dashboard" class="active">Dashboard</a></li> <!-- Asegúrate de que los enlaces usen rutas correctas -->
+        <li><a href="/habitaciones">Gestión de Habitaciones</a></li>
+        <li><a href="/pagos">Pagos</a></li>
+        <li><a href="/solicitudes">Solicitudes de Mantenimiento</a></li>
+      </ul>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main class="main-content">
+      <header>
+        <h1>Bienvenido, Administrador</h1>
+      </header>
+
+      <section class="stats">
+        <div class="stat-card">
+          <h3>Habitaciones Ocupadas</h3>
+          <p>120</p>
+        </div>
+        <div class="stat-card">
+          <h3>Habitaciones Disponibles</h3>
+          <p>30</p>
+        </div>
+        <div class="stat-card">
+          <h3>Pagos Pendientes</h3>
+          <p>15</p>
+        </div>
+      </section>
+
+      <section class="recent-activity">
+        <h2>Actividad Reciente</h2>
+        <!-- Aquí puedes agregar una tabla o tarjetas con la actividad reciente -->
+      </section>
+    </main>
+  </div>
+</body>
+</html>

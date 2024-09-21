@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solicitudes de Mantenimiento (Estudiante)</title>
+  <link rel="stylesheet" href="/css/solicitudes_estudiante.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Mi Residencia</h2>
+      <ul>
+        <li><a href="/dashboard_estudiante">Inicio</a></li>
+        <li><a href="/pagos_estudiante">Pagos</a></li>
+        <li><a href="/solicitudes_estudiante" class="active">Solicitudes de Mantenimiento</a></li>
+      </ul>
+    </aside>
+
+    <main class="main-content">
+      <header>
+        <h1>Mis Solicitudes de Mantenimiento</h1>
+        <button id="agregarSolicitud">Nueva Solicitud</button>
+      </header>
+
+      <section class="solicitudes-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Descripción</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+          <tbody id="listaSolicitudes">
+            <!-- Aquí se mostrarán las solicitudes del estudiante -->
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <script src="/js/dashboard_estudiante.js"></script>
+  <script>
+    // Arreglo temporal para las solicitudes del estudiante
+    let solicitudes = [];
+
+    // Función para mostrar las solicitudes en la tabla
+    function mostrarSolicitudesEstudiante() {
+      const listaSolicitudes = document.getElementById('listaSolicitudes');
+      listaSolicitudes.innerHTML = '';
+
+      solicitudes.forEach((solicitud, index) => {
+        let row = `
+          <tr>
+            <td>${solicitud.descripcion}</td>
+            <td>${solicitud.estado}</td>
+          </tr>
+        `;
+        listaSolicitudes.innerHTML += row;
+      });
+    }
+
+    // Función para agregar una nueva solicitud
+    function agregarSolicitudEstudiante(descripcion) {
+      const nuevaSolicitud = {
+        descripcion: descripcion,
+        estado: 'Pendiente'
+      };
+      solicitudes.push(nuevaSolicitud);
+      mostrarSolicitudesEstudiante();
+    }
+
+    // Al cargar la página, se mostrarán las solicitudes existentes
+    document.addEventListener("DOMContentLoaded", mostrarSolicitudesEstudiante);
+
+    // Al hacer clic en "Nueva Solicitud", se pedirá al usuario que ingrese una nueva descripción
+    document.getElementById("agregarSolicitud").addEventListener("click", () => {
+      const descripcion = prompt("Ingrese la descripción del problema:");
+      if (descripcion) {
+        agregarSolicitudEstudiante(descripcion);
+      }
+    });
+  </script>
+</body>
+</html>

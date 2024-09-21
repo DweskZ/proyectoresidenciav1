@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de Habitaciones</title>
+  <link rel="stylesheet" href="/css/habitaciones.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Gestión de Residencia</h2>
+      <ul>
+        <li><a href="/dashboard">Dashboard</a></li>
+        <li><a href="/habitaciones" class="active">Gestión de Habitaciones</a></li>
+        <li><a href="/pagos">Pagos</a></li>
+        <li><a href="/solicitudes">Solicitudes de Mantenimiento</a></li>
+      </ul>
+    </aside>
+
+    <main class="main-content">
+      <header>
+        <h1>Gestión de Habitaciones</h1>
+        <!-- Botón de agregar habitación con desplegable -->
+        <div class="dropdown">
+          <button id="agregarHabitacion">Agregar Habitación</button>
+          <div class="dropdown-content"></div>
+        </div>
+      </header>
+
+      <section class="habitaciones-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Número de Habitación</th>
+              <th>Estado</th>
+              <th>Residente</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Aquí se van a insertar dinámicamente las habitaciones -->
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <script src="/js/admin.js"></script> <!-- Enlace al archivo admin.js -->
+  <script>
+    document.addEventListener("DOMContentLoaded", mostrarHabitaciones);
+
+    // Mostrar la cuadrícula de habitaciones al hacer clic en el botón
+    document.getElementById("agregarHabitacion").addEventListener("click", () => {
+      mostrarCuadriculaHabitaciones();
+    });
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pagos Estudiante</title>
+  <link rel="stylesheet" href="/css/pagos_estudiante.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Mi Residencia</h2>
+      <ul>
+        <li><a href="/dashboard_estudiante">Inicio</a></li>
+        <li><a href="/pagos_estudiante" class="active">Pagos</a></li>
+        <li><a href="/solicitudes_estudiante">Solicitudes de Mantenimiento</a></li>
+      </ul>
+    </aside>
+
+    <main class="main-content">
+      <header>
+        <h1>Mis Pagos</h1>
+      </header>
+
+      <section class="pagos-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Residente</th>
+              <th>Monto</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Aquí se mostrarán los pagos del residente -->
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <script src="/js/pagos_estudiante.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", mostrarPagosEstudiante);
+  </script>
+</body>
+</html>

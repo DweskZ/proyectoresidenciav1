@@ -1,0 +1,25 @@
+.error-page {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .error-page h1 {
+    font-size: 100px;
+    color: #D71920;
+  }
+  
+  .error-page p {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .error-page a {
+    font-size: 18px;
+    color: #005BA2;
+    text-decoration: none;
+  }
+  
+  .error-page a:hover {
+    color: #D71920;
+  }
+  
