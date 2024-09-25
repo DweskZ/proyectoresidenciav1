@@ -24,3 +24,13 @@ function cargarResumenEstudiante() {
     document.getElementById("solicitudesPendientes").textContent = solicitudesPendientes;
   }
   
+
+  // Función para cerrar la sesión
+  document.addEventListener("DOMContentLoaded", function () {
+    const usuario = JSON.parse(localStorage.getItem("usuario"));
+  
+    if (!usuario || usuario.role !== "residente") {
+      window.location.href = "/login"; // Redirigir al login si no es residente
+    }
+  });
+  

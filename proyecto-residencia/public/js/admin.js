@@ -217,3 +217,9 @@ function mostrarCuadriculaHabitaciones() {
     mostrarHabitaciones(); // Refrescar la lista
   }
   
+
+  document.getElementById("logoutButton").addEventListener("click", function() {
+    localStorage.clear();
+    window.location.href = "/login";
+  });
+  

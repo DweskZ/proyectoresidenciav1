@@ -5,20 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dashboard - Administrador</title>
   <link rel="stylesheet" href="/css/dashboard.css">
+  <div class="top-bar">
+    <img src="img/logo-residencia.png" alt="Residencia ULEAM">
+    <div class="profile-icon">
+      <img src="/img/profile-icon.png" alt="Perfil" id="profileIcon">
+      <div id="dropdownMenu" class="dropdown-content">
+        <a href="/perfil">Ver Perfil</a> 
+        <a href="#" id="logoutButton">Cerrar Sesión</a>
+      </div>
+    </div>
+  </div>  
 </head>
 <body>
   <div class="container">
     <!-- Menú lateral -->
     <aside class="sidebar">
-      <h2>Gestión de Residencia</h2>
+      <h2>Residencia ULEAM</h2>
+      <h3>Administrador</h3>
+      <hr>
+      <h2>Menú</h2>
       <ul>
-        <li><a href="/dashboard" class="active">Dashboard</a></li> <!-- Asegúrate de que los enlaces usen rutas correctas -->
+        <li><a href="/dashboard" class="active">Dashboard</a></li>
         <li><a href="/habitaciones">Gestión de Habitaciones</a></li>
         <li><a href="/pagos">Pagos</a></li>
         <li><a href="/solicitudes">Solicitudes de Mantenimiento</a></li>
       </ul>
+
     </aside>
 
+
+    
     <!-- Contenido principal -->
     <main class="main-content">
       <header>
@@ -47,4 +63,6 @@
     </main>
   </div>
 </body>
+
+
 </html>

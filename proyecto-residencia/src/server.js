@@ -49,13 +49,25 @@ app.get('/solicitudes_estudiante', (req, res) => {
   res.sendFile(path.join(__dirname, 'views/solicitudes_estudiante.html'));
 });
 
-// Ruta para la página de error 404
-app.use((req, res) => {
-  res.status(404).sendFile(path.join(__dirname, 'views/404.html'));
-});
 
 // Configurar el puerto
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en el puerto ${PORT}`);
+});
+
+
+// Ruta para la página de inicio de sesión
+app.get('/login', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views/login.html'));
+});
+
+app.get('/perfil', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views/perfil.html'));
+});
+
+
+// Ruta para la página de error 404
+app.use((req, res) => {
+  res.status(404).sendFile(path.join(__dirname, 'views/404.html'));
 });
