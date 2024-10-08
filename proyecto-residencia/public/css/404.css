@@ -1,25 +1,24 @@
 .error-page {
-    text-align: center;
-    margin-top: 50px;
-  }
-  
-  .error-page h1 {
-    font-size: 100px;
-    color: #D71920;
-  }
-  
-  .error-page p {
-    font-size: 24px;
-    color: #333;
-  }
-  
-  .error-page a {
-    font-size: 18px;
-    color: #005BA2;
-    text-decoration: none;
-  }
-  
-  .error-page a:hover {
-    color: #D71920;
-  }
-  
+  text-align: center; /* Alinea el texto al centro de la página */
+  margin-top: 50px;   /* Agrega un margen superior de 50px para separar el contenido del borde superior */
+}
+
+.error-page h1 {
+  font-size: 100px;   /* Define el tamaño de la fuente como 100px para el título 404 */
+  color: #D71920;     /* Aplica un color rojo intenso al número de error */
+}
+
+.error-page p {
+  font-size: 24px;    /* Establece el tamaño de la fuente en 24px para el mensaje descriptivo */
+  color: #333;        /* Asigna un color gris oscuro al mensaje */
+}
+
+.error-page a {
+  font-size: 18px;    /* Define el tamaño de la fuente como 18px para el enlace de retorno */
+  color: #005BA2;     /* Aplica un color azul para el enlace */
+  text-decoration: none; /* Elimina el subrayado del enlace */
+}
+
+.error-page a:hover {
+  color: #D71920;     /* Cambia el color del enlace a rojo cuando el usuario pasa el cursor sobre él */
+}

@@ -1,26 +1,84 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--
+  Este archivo HTML contiene el formulario de inicio de sesión para el portal de gestión de residencia universitaria.
+  Proporciona una interfaz para que los usuarios ingresen sus credenciales y accedan al sistema.
+  -->
+
+  <meta charset="UTF-8"> <!-- Define la codificación de caracteres en UTF-8 para manejar caracteres especiales. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Optimización para que la página se vea bien en todos los dispositivos. -->
+
+  <!-- Título que aparece en la pestaña del navegador -->
   <title>Inicio de Sesión - Residencia ULEAM</title>
+
+  <!-- Enlace al archivo CSS para los estilos de la página de inicio de sesión -->
   <link rel="stylesheet" href="/css/login.css">
+
+  <!-- Ícono (favicon) que aparece en la pestaña del navegador -->
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
 </head>
 <body>
+  <!--
+  Sección de encabezado con un saludo de bienvenida y un enlace para solicitar la residencia.
+  El botón redirige a un formulario donde el usuario puede hacer una solicitud de residencia universitaria.
+  -->
+  <header class="header">
+    <h1>Bienvenido al Portal de Residencia</h1>
+    <a href="/solicitud_residencia" class="solicitud-btn-header">Solicitar Residencia</a> <!-- Botón para solicitar la residencia -->
+  </header>
+
+  <!--
+  Contenedor principal para el formulario de inicio de sesión.
+  Incluye campos para que el usuario ingrese su nombre de usuario o email y su contraseña.
+  -->
   <div class="login-container">
+    <!-- Logo de la Universidad Laica Eloy Alfaro de Manabí (ULEAM) -->
     <img src="/img/logo-uleam.png" alt="Logo ULEAM" class="logo">
-    <h2>Gestión de Residencia Universitaria</h2>
+
+    <h2>Gestión de Residencia Universitaria</h2> <!-- Subtítulo de la página -->
+
+    <!-- Logo adicional de la residencia -->
     <img src="img/logo-residencia.png" alt="Logo Residencia" class="logo">
+
+    <!-- Título del formulario de inicio de sesión -->
     <h1>Inicio de Sesión</h1>
-    <form id="loginForm"> <!-- Eliminado el action -->
-      <input type="text" name="username" placeholder="Usuario o Email" required>
-      <input type="password" name="password" placeholder="Contraseña" required>
+
+    <!--
+    Formulario de inicio de sesión donde el usuario ingresa sus credenciales.
+    Se utiliza el atributo "required" para validar que ambos campos sean completados antes de enviar el formulario.
+    -->
+    <form id="loginForm">
+      <input type="text" name="username" placeholder="Usuario o Email" required> <!-- Campo para el nombre de usuario o email -->
+      <input type="password" name="password" placeholder="Contraseña" required> <!-- Campo para la contraseña -->
+
+      <!-- Botón para enviar el formulario de inicio de sesión -->
       <button type="submit">Iniciar Sesión</button>
     </form>
-    <p id="error-message" style="color: red; display: none;">Credenciales incorrectas</p> <!-- Agregado mensaje de error -->
+
+    <!-- Mensaje de error oculto que se mostrará si las credenciales son incorrectas -->
+    <p id="error-message" style="color: red; display: none;">Credenciales incorrectas</p>
+
+    <!-- Enlace para recuperar la contraseña -->
     <a href="#">¿Olvidaste tu contraseña?</a>
   </div>
 
-  <script src="/js/login.js"></script> <!-- Enlace al archivo JS -->
+  <!--
+  Sección del pie de página que incluye la información de derechos reservados y enlaces útiles.
+  -->
+  <footer class="footer">
+    <p>Universidad Laica Eloy Alfaro de Manabí - Todos los derechos reservados</p> <!-- Derechos reservados -->
+    
+    <!-- Lista de enlaces en el pie de página -->
+    <ul class="footer-links">
+      <li><a href="#">Ayuda</a></li>
+      <li><a href="#">Contacto</a></li>
+      <li><a href="#">Términos y Condiciones</a></li>
+      <li><a href="#">Política de Privacidad</a></li>
+    </ul>
+  </footer>
+
+  <!-- Archivo JavaScript externo que contiene las funcionalidades del formulario de inicio de sesión -->
+  <script src="/js/login.js"></script>
 </body>
 </html>

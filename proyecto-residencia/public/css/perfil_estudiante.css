@@ -1,0 +1,95 @@
+body {
+  background-color: #d4d6d9; /* Fondo gris claro para todo el documento */
+  display: flex; /* Usa flexbox para centrar el contenido vertical y horizontalmente */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  min-height: 100vh; /* Altura mínima de la pantalla */
+  margin: 0; /* Elimina el margen predeterminado */
+  font-family: 'Roboto', sans-serif; /* Aplica la fuente Roboto */
+}
+
+.container {
+  background-color: #E0E0E0; /* Fondo gris claro para el contenedor */
+  padding: 20px; /* Espaciado interno */
+  width: 100%; /* El ancho del contenedor ocupa el 100% */
+  max-width: 900px; /* Ancho máximo de 900px */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra ligera para darle profundidad */
+}
+
+.profile-header {
+  text-align: center; /* Centra el texto */
+  background-color: #005BA2; /* Fondo azul oscuro */
+  color: white; /* Texto blanco */
+  padding: 20px; /* Espaciado interno */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+.profile-avatar {
+  width: 100px; /* Ancho fijo de 100px */
+  height: 100px; /* Altura fija de 100px */
+  border-radius: 50%; /* Imagen circular */
+  margin-bottom: 20px; /* Espacio debajo del avatar */
+}
+
+.profile-header h2 {
+  margin-bottom: 10px; /* Espacio debajo del título */
+}
+
+.edit-btn, .back-btn {
+  background-color: #D71920; /* Fondo rojo */
+  color: white; /* Texto blanco */
+  border: none; /* Sin borde */
+  padding: 10px 20px; /* Espaciado interno */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Muestra un puntero al pasar el mouse */
+  margin: 10px; /* Espaciado alrededor del botón */
+}
+
+.edit-btn:hover, .back-btn:hover {
+  background-color: #005BA2; /* Cambia el fondo a azul al hacer hover */
+}
+
+.profile-stats {
+  display: flex; /* Flexbox para organizar las tarjetas */
+  justify-content: space-between; /* Distribuye las tarjetas con espacio entre ellas */
+  margin-top: 30px; /* Margen superior de 30px */
+  gap: 20px; /* Espaciado entre las tarjetas */
+}
+
+.stat-card {
+  background-color: white; /* Fondo blanco */
+  border-radius: 10px; /* Bordes redondeados */
+  padding: 20px; /* Espaciado interno */
+  width: 30%; /* Cada tarjeta ocupa el 30% del ancho */
+  text-align: center; /* Texto centrado */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  margin: 0 10px; /* Espaciado entre las tarjetas */
+}
+
+.stat-card h3 {
+  color: #005BA2; /* Color azul para los encabezados */
+}
+
+.stat-card p {
+  font-size: 24px; /* Texto grande para los números */
+  color: #D71920; /* Texto en rojo */
+  margin-top: 10px; /* Espaciado superior */
+}
+
+.recent-activity {
+  margin-top: 30px; /* Margen superior de 30px */
+}
+
+.recent-activity ul {
+  list-style-type: none; /* Elimina los bullets de la lista */
+  padding: 0; /* Elimina el padding por defecto */
+}
+
+.recent-activity ul li {
+  background-color: white; /* Fondo blanco */
+  margin-bottom: 10px; /* Espaciado inferior entre las actividades */
+  padding: 15px; /* Espaciado interno */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}

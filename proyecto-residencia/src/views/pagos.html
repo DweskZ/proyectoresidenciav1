@@ -1,54 +1,95 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <!-- Metadatos de configuración de la página -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Título de la página -->
   <title>Gestión de Pagos</title>
+
+  <!-- Enlace al archivo CSS para estilos específicos de la gestión de pagos -->
   <link rel="stylesheet" href="/css/pagos.css">
+  
+  <!-- Favicon para la pestaña del navegador -->
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+
+  <!-- Barra superior con logo y perfil de usuario -->
+  <div class="top-bar">
+    <!-- Logo de la residencia ULEAM -->
+    <img src="img/logo-residencia.png" alt="Residencia ULEAM">
+    
+    <!-- Icono de perfil y menú desplegable -->
+    <div class="profile-icon">
+      <img src="/img/profile-icon.png" alt="Perfil" id="profileIcon">
+      <div id="dropdownMenu" class="dropdown-content">
+        <a href="/perfil">Ver Perfil</a> <!-- Enlace a la página de perfil -->
+        <a href="#" id="logoutButton" class="logout-btn">Cerrar Sesión</a> <!-- Opción para cerrar sesión -->
+      </div>
+    </div>
+  </div>  
 </head>
+
 <body>
+  <!-- Contenedor principal de la página -->
   <div class="container">
+
+    <!-- Menú lateral con enlaces a diferentes secciones del administrador -->
     <aside class="sidebar">
-      <h2>Gestión de Residencia</h2>
-  <ul>
-    <li><a href="/dashboard">Dashboard</a></li>
-    <li><a href="/habitaciones">Gestión de Habitaciones</a></li>
-    <li><a href="/pagos">Pagos</a></li>
-    <li><a href="/solicitudes">Solicitudes de Mantenimiento</a></li>
-  </ul>
+      <h3>Administrador</h3> <!-- Título de rol del usuario -->
+      <hr> <!-- Línea divisoria -->
+      <h2>Menú</h2> <!-- Título del menú -->
+
+      <!-- Lista de opciones del menú -->
+      <ul>
+        <li><a href="/dashboard">Dashboard</a></li> <!-- Enlace al panel principal -->
+        <li><a href="/habitaciones">Gestión de Habitaciones</a></li> <!-- Enlace a la gestión de habitaciones -->
+        <li><a href="/pagos" class="active">Pagos</a></li> <!-- Enlace activo para la gestión de pagos -->
+        <li><a href="/solicitudes">Solicitudes de Mantenimiento</a></li> <!-- Enlace para ver las solicitudes -->
+      </ul>
     </aside>
 
+    <!-- Sección principal del contenido de la página -->
     <main class="main-content">
+      <!-- Encabezado que indica la sección actual (Gestión de Pagos) -->
       <header>
         <h1>Gestión de Pagos</h1>
       </header>
 
+      <!-- Tabla que muestra los detalles de los pagos -->
       <section class="pagos-table">
         <table>
+          <!-- Encabezados de la tabla -->
           <thead>
             <tr>
-              <th>Residente</th>
-              <th>Habitación</th>
-              <th>Estado del Pago</th>
-              <th>Monto</th>
-              <th>Fecha de Pago</th>
-              <th>Acciones</th>
+              <th>Residente</th> <!-- Columna para el nombre del residente -->
+              <th>Habitación</th> <!-- Columna para el número de habitación -->
+              <th>Estado del Pago</th> <!-- Columna para el estado actual del pago (Pendiente, Pagado) -->
+              <th>Monto</th> <!-- Columna para el monto del pago -->
+              <th>Fecha de Pago</th> <!-- Columna para la fecha en la que se realizó el pago -->
+              <th>Acciones</th> <!-- Columna para acciones como "Marcar como Pagado" -->
             </tr>
           </thead>
+
+          <!-- Cuerpo de la tabla con los datos de los residentes -->
           <tbody>
             <tr>
-              <td>Juan Pérez</td>
-              <td>101</td>
-              <td>Pendiente</td>
-              <td>$200</td>
-              <td>-</td>
-              <td><button>Marcar como Pagado</button></td>
+              <td>Juan Pérez</td> <!-- Nombre del residente -->
+              <td>101</td> <!-- Número de habitación -->
+              <td>Pendiente</td> <!-- Estado actual del pago -->
+              <td>$200</td> <!-- Monto a pagar -->
+              <td>-</td> <!-- No se muestra una fecha porque el pago está pendiente -->
+              <td><button>Marcar como Pagado</button></td> <!-- Acción para marcar como pagado -->
             </tr>
-            <!-- Más filas -->
+            <!-- Aquí se pueden añadir más filas para otros residentes -->
           </tbody>
         </table>
       </section>
     </main>
   </div>
 </body>
+
+<!-- Enlace al archivo JavaScript para manejar la lógica de la página -->
+<script src="/js/dashboard.js"></script>
+
 </html>

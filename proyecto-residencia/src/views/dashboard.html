@@ -1,50 +1,126 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--
+  Este archivo HTML define la estructura del Dashboard del Administrador en el sistema de gestión de la residencia.
+  El administrador puede gestionar habitaciones, pagos y solicitudes de mantenimiento.
+  -->
+  <meta charset="UTF-8"> <!-- Codificación de caracteres UTF-8 para admitir caracteres especiales. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ajuste responsivo para dispositivos móviles. -->
+  
+  <!-- Título que aparece en la pestaña del navegador -->
   <title>Dashboard - Administrador</title>
+
+  <!-- Enlace al archivo CSS externo que contiene los estilos del Dashboard del Administrador -->
   <link rel="stylesheet" href="/css/dashboard.css">
+  
+  <!-- Favicon del sistema, un pequeño ícono que aparece en la pestaña del navegador -->
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+  
+  <!-- Barra superior que incluye el logo de la residencia y el ícono de perfil del administrador -->
+  <div class="top-bar">
+    <!-- Imagen del logo de la residencia -->
+    <img src="img/logo-residencia.png" alt="Residencia ULEAM">
+
+    <!-- Ícono de perfil del administrador con un menú desplegable -->
+    <div class="profile-icon">
+      <!-- Imagen del ícono de perfil -->
+      <img src="/img/profile-icon.png" alt="Perfil" id="profileIcon">
+
+      <!-- Menú desplegable del ícono de perfil -->
+      <div id="dropdownMenu" class="dropdown-content">
+        <a href="/perfil">Ver Perfil</a> <!-- Enlace para ver el perfil del administrador -->
+        <a href="#" id="logoutButton"  class="logout-btn">Cerrar Sesión</a> <!-- Botón para cerrar sesión -->
+      </div>
+    </div>
+  </div>
 </head>
+
 <body>
+  <!--
+  Contenedor principal que incluye la barra lateral de navegación (menú) y el área de contenido principal.
+  El administrador puede navegar por las diferentes secciones del sistema.
+  -->
   <div class="container">
-    <!-- Menú lateral -->
+    <!-- Menú lateral que contiene enlaces a las principales funciones del sistema -->
     <aside class="sidebar">
-      <h2>Gestión de Residencia</h2>
+      <h3>Administrador</h3> <!-- Título de la sección de administrador -->
+      <hr> <!-- Separador visual -->
+      <h2>Menú</h2> <!-- Título del menú de navegación -->
+      
+      <!-- Lista de enlaces del menú lateral -->
       <ul>
-        <li><a href="/dashboard" class="active">Dashboard</a></li> <!-- Asegúrate de que los enlaces usen rutas correctas -->
-        <li><a href="/habitaciones">Gestión de Habitaciones</a></li>
-        <li><a href="/pagos">Pagos</a></li>
-        <li><a href="/solicitudes">Solicitudes de Mantenimiento</a></li>
+        <li><a href="/dashboard" class="active">Dashboard</a></li> <!-- Enlace al Dashboard -->
+        <li><a href="/habitaciones">Gestión de Habitaciones</a></li> <!-- Enlace a la gestión de habitaciones -->
+        <li><a href="/pagos">Pagos</a></li> <!-- Enlace a la gestión de pagos -->
+        <li><a href="/solicitudes">Solicitudes de Mantenimiento</a></li> <!-- Enlace a las solicitudes de mantenimiento -->
       </ul>
     </aside>
 
-    <!-- Contenido principal -->
+    <!--
+    Contenido principal donde se muestra la información y estadísticas del sistema.
+    Aquí se reflejan las habitaciones ocupadas, habitaciones disponibles, y pagos pendientes, junto con una tabla de actividad reciente.
+    -->
     <main class="main-content">
+      <!-- Encabezado principal de la página -->
       <header>
-        <h1>Bienvenido, Administrador</h1>
+        <h1>Bienvenido, Administrador</h1> <!-- Título de bienvenida para el administrador -->
       </header>
 
+      <!-- Sección de estadísticas donde se muestran datos clave -->
       <section class="stats">
         <div class="stat-card">
           <h3>Habitaciones Ocupadas</h3>
-          <p>120</p>
+          <p>30</p> <!-- Cantidad de habitaciones ocupadas -->
         </div>
         <div class="stat-card">
           <h3>Habitaciones Disponibles</h3>
-          <p>30</p>
+          <p>20</p> <!-- Cantidad de habitaciones disponibles -->
         </div>
         <div class="stat-card">
           <h3>Pagos Pendientes</h3>
-          <p>15</p>
+          <p>10</p> <!-- Cantidad de pagos pendientes -->
         </div>
       </section>
-
+      
+      <!--
+      Sección que muestra la actividad reciente, como los últimos pagos realizados o asignaciones de habitaciones.
+      La actividad se muestra en forma de tabla.
+      -->
       <section class="recent-activity">
-        <h2>Actividad Reciente</h2>
-        <!-- Aquí puedes agregar una tabla o tarjetas con la actividad reciente -->
+        <h2>Actividad Reciente</h2> <!-- Título de la sección de actividad reciente -->
+        
+        <!-- Tabla que contiene la lista de actividades recientes -->
+        <table>
+          <thead>
+            <!-- Cabecera de la tabla que define las columnas de la tabla -->
+            <tr>
+              <th>Fecha</th> <!-- Columna para la fecha de la actividad -->
+              <th>Descripción</th> <!-- Columna para la descripción de la actividad -->
+              <th>Acciones</th> <!-- Columna para las acciones que puede realizar el administrador -->
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Fila de la tabla que contiene una actividad reciente -->
+            <tr>
+              <td>01/10/2024</td> <!-- Fecha de la actividad -->
+              <td>Pago realizado por Juan Pérez</td> <!-- Descripción de la actividad -->
+              <td class="table-actions"><a href="#">Ver</a></td> <!-- Enlace para ver más detalles -->
+            </tr>
+
+            <!-- Fila adicional para otra actividad reciente -->
+            <tr>
+              <td>29/09/2024</td>
+              <td>Asignación de habitación a Maria García</td>
+              <td class="table-actions"><a href="#">Ver</a></td> <!-- Enlace para ver más detalles -->
+            </tr>
+          </tbody>
+        </table>
       </section>
     </main>
   </div>
+
+  <!-- Enlace al archivo JavaScript que contiene las interacciones dinámicas del Dashboard -->
+  <script src="/js/dashboard.js"></script>
 </body>
 </html>

@@ -3,49 +3,109 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard Estudiante</title>
-  <link rel="stylesheet" href="/css/dashboard_estudiante.css">
+  <title>Residencia Estudiante</title>
+  <!-- Favicon para la página -->
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+  <!-- Enlace al archivo CSS para estilos -->
+  <link rel="stylesheet" href="css/dashboard_estudiante.css">
 </head>
 <body>
-  <div class="container">
-    <aside class="sidebar">
-      <h2>Mi Residencia</h2>
-      <ul>
-        <li><a href="/dashboard_estudiante" class="active">Inicio</a></li>
-        <li><a href="/pagos_estudiante">Pagos</a></li>
-        <li><a href="/solicitudes_estudiante">Solicitudes de Mantenimiento</a></li>
-      </ul>
-    </aside>
-
-    <main class="main-content">
-      <header>
-        <h1>Bienvenido, Estudiante</h1>
-      </header>
-
-      <section class="overview">
-        <h2>Resumen de tu Residencia</h2>
-
-        <div class="stat-card">
-          <h3>Habitación</h3>
-          <p id="habitacion"></p>
-        </div>
-
-        <div class="stat-card">
-          <h3>Pagos Pendientes</h3>
-          <p id="pagosPendientes"></p>
-        </div>
-
-        <div class="stat-card">
-          <h3>Solicitudes Pendientes</h3>
-          <p id="solicitudesPendientes"></p>
-        </div>
-      </section>
-    </main>
+  <!-- Barra superior que incluye el logo de la residencia y el perfil del estudiante -->
+  <div class="top-bar">
+    <!-- Logo de la residencia -->
+    <img src="img/logo-residencia.png" alt="Residencia ULEAM">
+    <!-- Icono del perfil con menú desplegable -->
+    <div class="profile-icon">
+      <img src="img/profile-icon.png" alt="Perfil" id="profileIcon">
+      <!-- Menú desplegable al hacer clic en el perfil -->
+      <div id="dropdownMenu" class="dropdown-content">
+        <a href="/perfil_estudiante">Ver Perfil</a>
+        <a href="#" id="logoutButton" class="logout-btn">Cerrar Sesión</a>
+      </div>
+    </div>
   </div>
 
-  <script src="/js/dashboard_estudiante.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", cargarResumenEstudiante);
-  </script>
+  <!-- Contenedor principal centrado que contiene las pestañas de navegación -->
+  <div class="main-container">
+    <!-- Pestañas para cambiar entre las secciones de habitación, pagos y solicitudes -->
+    <div class="tabs">
+      <button class="tablink active" onclick="openTab(event, 'Habitacion')">Habitación</button>
+      <button class="tablink" onclick="openTab(event, 'Pagos')">Pagos</button>
+      <button class="tablink" onclick="openTab(event, 'Solicitudes')">Solicitudes</button>
+    </div>
+
+    <!-- Contenido de cada pestaña -->
+    <div class="tab-content">
+      <!-- Sección de la habitación asignada -->
+      <div id="Habitacion" class="tabcontent active">
+        <h2>Detalles de la Habitación</h2>
+        <div class="card">
+          <!-- Información sobre la habitación -->
+          <p><strong>Habitación Asignada:</strong> 102</p>
+          <p><strong>Estado:</strong> Ocupada</p>
+          <p><strong>Residente:</strong> Juan Pérez</p>
+          <p><strong>Fecha de Asignación:</strong> 01/01/2024</p>
+          <!-- Botón para ver más detalles de la habitación -->
+          <button>Ver más detalles</button>
+        </div>
+      </div>
+
+      <!-- Sección de pagos pendientes -->
+      <div id="Pagos" class="tabcontent">
+        <h2>Pagos Pendientes</h2>
+        <!-- Tabla de pagos con columnas para mes, estado y acción -->
+        <table>
+          <thead>
+            <tr>
+              <th>Mes</th>
+              <th>Estado</th>
+              <th>Acción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Marzo 2024</td>
+              <td>Pendiente</td>
+              <td><button>Cancelar Pago</button></td>
+            </tr>
+            <tr>
+              <td>Febrero 2024</td>
+              <td>Cancelado</td>
+              <td><button>Ver Detalles</button></td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- Botón para realizar un nuevo pago -->
+        <button class="add-action">Realizar nuevo pago</button>
+      </div>
+
+      <!-- Sección de solicitudes de mantenimiento -->
+      <div id="Solicitudes" class="tabcontent">
+        <h2>Solicitudes de Mantenimiento</h2>
+        <!-- Tabla de solicitudes con columnas para tipo, estado y acción -->
+        <table>
+          <thead>
+            <tr>
+              <th>Tipo</th>
+              <th>Estado</th>
+              <th>Acción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Mantenimiento</td>
+              <td>Pendiente</td>
+              <td><button>Actualizar Estado</button></td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- Botón para hacer una nueva solicitud de mantenimiento -->
+        <button class="add-action">Hacer nueva solicitud</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Archivo JavaScript para la funcionalidad de las pestañas -->
+  <script src="js/dashboard_estudiante.js"></script>
 </body>
 </html>

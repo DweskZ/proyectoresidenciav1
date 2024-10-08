@@ -1,0 +1,123 @@
+body {
+  font-family: 'Roboto', sans-serif; /* Fuente principal del cuerpo */
+  background-color: #E3E5E9; /* Color de fondo gris claro */
+  margin: 0; /* Elimina márgenes predeterminados */
+  padding: 0; /* Elimina relleno predeterminado */
+}
+
+.header {
+  background-color: #005BA2; /* Fondo azul oscuro */
+  color: white; /* Texto blanco */
+  padding: 1px; /* Espacio interno */
+  text-align: center; /* Centra el contenido */
+}
+
+.solicitud-container {
+  width: 100%; /* Ocupa todo el ancho disponible */
+  max-width: 500px; /* Ancho máximo para pantallas más grandes */
+  margin: 10px auto; /* Centrado horizontal con margen superior e inferior */
+  padding: 30px; /* Espaciado interno */
+  background-color: white; /* Fondo blanco */
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Sombra ligera */
+  border: 1px solid #ddd; /* Borde gris claro */
+}
+
+.input-group {
+  margin-bottom: 20px; /* Espaciado inferior */
+}
+
+.input-group label {
+  display: block; /* Hace que el label ocupe todo el ancho */
+  font-weight: bold; /* Texto en negrita */
+  margin-bottom: 5px; /* Espacio entre el label y el campo de entrada */
+  color: #333; /* Color gris oscuro */
+}
+
+input, select, textarea {
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  padding: 10px; /* Espaciado interno */
+  border: 1px solid #ccc; /* Borde gris claro */
+  border-radius: 8px; /* Bordes redondeados */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transiciones para suavidad al enfocar */
+  background-color: #f9f9f9; /* Fondo gris muy claro */
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #005BA2; /* Cambia el color del borde al azul al enfocar */
+  box-shadow: 0 0 5px rgba(0, 91, 162, 0.3); /* Sombra suave al enfocar */
+  outline: none; /* Elimina el borde por defecto */
+}
+
+textarea {
+  resize: vertical; /* Permite que el usuario ajuste la altura del textarea */
+}
+
+.fecha-wrapper {
+  display: flex; /* Alinea los elementos en fila */
+  justify-content: space-between; /* Distribuye el espacio entre ellos */
+}
+
+.fecha-inicio, .fecha-fin {
+  width: 40%; /* Cada campo ocupa el 40% del ancho del contenedor */
+}
+
+.checkbox-wrapper {
+  display: flex; /* Alinea el checkbox y el texto en fila */
+  align-items: center; /* Alinea verticalmente en el centro */
+  margin-left: 30px; /* Espacio a la izquierda del checkbox */
+}
+
+.confirm-msg {
+  background-color: #e1f5fe; /* Fondo azul claro */
+  color: #0277bd; /* Texto azul más oscuro */
+  border: 1px solid #0277bd; /* Borde azul oscuro */
+  padding: 10px; /* Espaciado interno */
+  border-radius: 10px; /* Bordes redondeados */
+  margin-top: 20px; /* Espacio superior */
+  text-align: center; /* Texto centrado */
+}
+
+button {
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  padding: 12px; /* Espaciado interno aumentado para mayor comodidad */
+  margin-top: 12px; /* Espaciado superior */
+  border: none; /* Sin borde */
+  border-radius: 8px; /* Bordes redondeados */
+  font-size: 16px; /* Tamaño de fuente */
+  cursor: pointer; /* Cambia el cursor a mano al pasar por encima */
+  transition: background-color 0.3s ease, box-shadow 0.2s ease; /* Suaviza las transiciones de color y sombra */
+}
+
+button:hover {
+  box-shadow: 0 2px 8px rgba(0, 91, 162, 0.3); /* Añade sombra al hacer hover */
+}
+
+.btn-primary {
+  background-color: #005BA2; /* Fondo azul para los botones principales */
+  color: white; /* Texto blanco */
+}
+
+.btn-primary:hover {
+  background-color: #003f7f; /* Cambia el fondo a azul más oscuro al hacer hover */
+}
+
+.btn-secondary {
+  background-color: #D71920; /* Fondo rojo para botones secundarios */
+  color: white; /* Texto blanco */
+}
+
+.btn-secondary:hover {
+  background-color: #a31313; /* Cambia a rojo más oscuro al hacer hover */
+}
+
+.footer {
+  background-color: #005BA2; /* Fondo azul oscuro */
+  color: white; /* Texto blanco */
+  text-align: center; /* Centra el texto */
+  padding: 0px; /* Elimina el espaciado */
+  margin-top: 10px; /* Margen superior */
+  position: fixed; /* Fija el footer en la parte inferior de la página */
+  bottom: 0; /* Lo coloca en la parte inferior */
+  width: 100%; /* Ocupa todo el ancho de la página */
+}

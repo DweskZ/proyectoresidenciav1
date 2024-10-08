@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil de Usuario</title>
+  <link rel="stylesheet" href="/css/perfil.css">
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <div class="container">
+    <div class="profile-header">
+      <img src="/img/profile-icon.png" alt="Avatar" class="profile-avatar">
+      <h2>Nombre del Usuario</h2>
+      <p>Correo Electrónico: usuario@dominio.com</p>
+      <button class="edit-btn">Editar Perfil</button>
+      <button class="back-btn" onclick="window.location.href='/dashboard'">Volver al Dashboard</button>
+    </div>
+
+    <div class="profile-stats">
+      <div class="stat-card">
+        <h3>Habitación Asignada</h3>
+        <p>101</p>
+      </div>
+      <div class="stat-card">
+        <h3>Pagos Pendientes</h3>
+        <p>10</p>
+      </div>
+      <div class="stat-card">
+        <h3>Solicitudes Activas</h3>
+        <p>3</p>
+      </div>
+    </div>
+
+    <div class="recent-activity">
+      <h2>Actividad Reciente</h2>
+      <ul>
+        <li>Solicitud de mantenimiento solucionado el 10 de septiembre.</li>
+        <li>Pago de la mensualidad verificado el 5 de septiembre.</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="/js/perfil.js"></script>
+</body>
+</html>

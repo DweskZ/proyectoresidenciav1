@@ -1,15 +1,57 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <!--
+  @descripcion: Página para la gestión de solicitudes de mantenimiento en la residencia.
+  Esta página permite a los administradores visualizar y gestionar las solicitudes de mantenimiento realizadas por los residentes.
+  -->
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--
+  @titulo: Solicitudes de Mantenimiento - Residencia ULEAM
+  -->
   <title>Solicitudes de Mantenimiento</title>
+  
+  <!--
+  @estilos: Enlace al archivo CSS que contiene los estilos específicos para la página de solicitudes.
+  -->
   <link rel="stylesheet" href="/css/solicitudes.css">
+
+  <!-- Icono de la página -->
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+
+  <!--
+  @seccion top-bar: Barra superior que incluye el logo de la residencia y el menú de perfil.
+  -->
+  <div class="top-bar">
+    <img src="img/logo-residencia.png" alt="Residencia ULEAM">
+    <div class="profile-icon">
+      <img src="/img/profile-icon.png" alt="Perfil" id="profileIcon">
+      <div id="dropdownMenu" class="dropdown-content">
+        <a href="/perfil">Ver Perfil</a> 
+        <a href="#" id="logoutButton" class="logout-btn">Cerrar Sesión</a>
+      </div>
+    </div>
+  </div>
 </head>
+
 <body>
+  <!--
+  @seccion container: Contenedor principal de la página.
+  Se divide en dos secciones: el menú lateral y el contenido principal.
+  -->
   <div class="container">
+
+    <!--
+    @menu-lateral: Menú lateral para la navegación entre las secciones del administrador.
+    Contiene enlaces a las distintas páginas de gestión (habitaciones, pagos, solicitudes).
+    -->
     <aside class="sidebar">
-      <h2>Gestión de Residencia</h2>
+      <h3>Administrador</h3>
+      <hr>
+      <h2>Menú</h2>
       <ul>
         <li><a href="/dashboard">Dashboard</a></li>
         <li><a href="/habitaciones">Gestión de Habitaciones</a></li>
@@ -18,11 +60,21 @@
       </ul>
     </aside>
 
+    <!--
+    @main-content: Sección de contenido principal donde se muestra la tabla con las solicitudes de mantenimiento.
+    -->
     <main class="main-content">
+      <!--
+      @header: Encabezado de la sección de solicitudes de mantenimiento.
+      -->
       <header>
         <h1>Solicitudes de Mantenimiento</h1>
       </header>
 
+      <!--
+      @seccion solicitudes-table: Tabla que contiene las solicitudes de mantenimiento con detalles de cada solicitud.
+      Muestra el residente, habitación, descripción del problema, estado y posibles acciones.
+      -->
       <section class="solicitudes-table">
         <table>
           <thead>
@@ -42,11 +94,17 @@
               <td>Pendiente</td>
               <td><button>Marcar como Resuelto</button></td>
             </tr>
-            <!-- Más filas -->
+            <!-- Se pueden agregar más filas con otras solicitudes -->
           </tbody>
         </table>
       </section>
     </main>
   </div>
+
+  <!--
+  @scripts: Enlace al archivo JavaScript de la página de dashboard, que maneja las interacciones de la interfaz.
+  -->
+  <script src="/js/dashboard.js"></script>
+
 </body>
 </html>

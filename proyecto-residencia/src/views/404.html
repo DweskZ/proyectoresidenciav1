@@ -1,15 +1,35 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <!--
+Este archivo HTML muestra la página de error 404 cuando el usuario intenta acceder a una ruta que no existe dentro del sistema de gestión de la residencia estudiantil.
+    Proporciona un mensaje de error amigable y un enlace para redirigir al usuario al Dashboard.
+  -->
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Título de la pestaña del navegador -->
   <title>Página no encontrada</title>
+  
+  <!-- Enlace al archivo CSS específico para la página de error 404 -->
   <link rel="stylesheet" href="/css/404.css">
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
 </head>
 <body>
+  <!--
+    @section error-page
+    @description Sección principal de la página de error 404, que muestra un mensaje indicando que la página no ha sido encontrada.
+    Incluye un enlace para volver al Dashboard.
+  -->
   <div class="error-page">
+    <!-- Título del error 404 -->
     <h1>404</h1>
+    
+    <!-- Mensaje indicando que la página no ha sido encontrada -->
     <p>Página no encontrada</p>
+    
+    <!-- Enlace para volver al Dashboard del sistema -->
     <a href="/dashboard">Volver al Dashboard</a>
   </div>
 </body>

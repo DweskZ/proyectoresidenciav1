@@ -1,60 +1,106 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--
+  Este archivo HTML define la interfaz para la Gestión de Habitaciones del sistema de administración de la residencia.
+  El administrador puede visualizar y gestionar habitaciones, así como agregar nuevas a través de un sistema interactivo.
+  -->
+  
+  <meta charset="UTF-8"> <!-- Codificación de caracteres en UTF-8 para soportar caracteres especiales. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Vista optimizada para dispositivos móviles. -->
+  
+  <!-- Título de la página que aparece en la pestaña del navegador -->
   <title>Gestión de Habitaciones</title>
+
+  <!-- Enlace al archivo CSS que define los estilos específicos para la página de gestión de habitaciones -->
   <link rel="stylesheet" href="/css/habitaciones.css">
+
+  <!-- Ícono que aparece en la pestaña del navegador (favicon) -->
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+
+  <!-- Barra superior con logo de la residencia y el ícono de perfil del administrador -->
+  <div class="top-bar">
+    <img src="img/logo-residencia.png" alt="Residencia ULEAM"> <!-- Logo de la residencia -->
+    <div class="profile-icon">
+      <img src="/img/profile-icon.png" alt="Perfil" id="profileIcon"> <!-- Ícono de perfil del administrador -->
+      <div class="profile-dropdown-content">
+        <!-- Menú desplegable con opciones de perfil y cerrar sesión -->
+        <a href="/perfil">Ver Perfil</a>
+        <a href="#" id="logoutButton" class="logout-btn">Cerrar Sesión</a>
+      </div>
+    </div>
+  </div>
 </head>
+
 <body>
+  <!--
+  Contenedor principal que incluye la barra lateral de navegación y el área de contenido principal para gestionar habitaciones.
+  -->
   <div class="container">
+    <!-- Menú lateral con opciones de navegación -->
     <aside class="sidebar">
-      <h2>Gestión de Residencia</h2>
+      <h3>Administrador</h3> <!-- Título de la sección de administrador -->
+      <hr> <!-- Separador visual -->
+      <h2>Menú</h2> <!-- Título del menú de navegación -->
+      
+      <!-- Lista de enlaces del menú lateral -->
       <ul>
-        <li><a href="/dashboard">Dashboard</a></li>
-        <li><a href="/habitaciones" class="active">Gestión de Habitaciones</a></li>
-        <li><a href="/pagos">Pagos</a></li>
-        <li><a href="/solicitudes">Solicitudes de Mantenimiento</a></li>
+        <li><a href="/dashboard">Dashboard</a></li> <!-- Enlace al Dashboard -->
+        <li><a href="/habitaciones" class="active">Gestión de Habitaciones</a></li> <!-- Enlace activo para gestión de habitaciones -->
+        <li><a href="/pagos">Pagos</a></li> <!-- Enlace para gestionar pagos -->
+        <li><a href="/solicitudes">Solicitudes de Mantenimiento</a></li> <!-- Enlace para gestionar solicitudes -->
       </ul>
     </aside>
 
+    <!--
+    Área principal donde se visualiza la gestión de habitaciones, permitiendo ver su estado, residente y realizar acciones.
+    -->
     <main class="main-content">
       <header>
-        <h1>Gestión de Habitaciones</h1>
-        <!-- Botón de agregar habitación con desplegable -->
+        <h1>Gestión de Habitaciones</h1> <!-- Título principal de la página -->
+
+        <!-- Botón para agregar una nueva habitación, que abre un menú desplegable -->
         <div class="dropdown">
           <button id="agregarHabitacion">Agregar Habitación</button>
-          <div class="dropdown-content"></div>
+          <div class="dropdown-content"></div> <!-- Espacio para desplegar la cuadrícula de habitaciones -->
         </div>
       </header>
 
+      <!--
+      Tabla que muestra el estado de las habitaciones y permite realizar acciones.
+      Se espera que el contenido de la tabla sea generado dinámicamente a través de JavaScript.
+      -->
       <section class="habitaciones-table">
         <table>
           <thead>
             <tr>
-              <th>Número de Habitación</th>
-              <th>Estado</th>
-              <th>Residente</th>
-              <th>Acciones</th>
+              <th>Número de Habitación</th> <!-- Columna para el número de habitación -->
+              <th>Estado</th> <!-- Columna para el estado de la habitación -->
+              <th>Residente</th> <!-- Columna para el nombre del residente -->
+              <th>Acciones</th> <!-- Columna para las acciones posibles (editar, eliminar, etc.) -->
             </tr>
           </thead>
           <tbody>
-            <!-- Aquí se van a insertar dinámicamente las habitaciones -->
+            <!-- Las habitaciones serán insertadas aquí dinámicamente -->
           </tbody>
         </table>
       </section>
     </main>
   </div>
 
-  <script src="/js/admin.js"></script> <!-- Enlace al archivo admin.js -->
+  <!--
+  Archivo JavaScript externo que contiene las funcionalidades dinámicas para la gestión de habitaciones.
+  -->
+  <script src="/js/admin.js"></script>
+
   <script>
+    // Función que se ejecuta cuando el contenido de la página ha cargado completamente
     document.addEventListener("DOMContentLoaded", mostrarHabitaciones);
 
-    // Mostrar la cuadrícula de habitaciones al hacer clic en el botón
+    // Función para mostrar la cuadrícula de habitaciones cuando se hace clic en el botón "Agregar Habitación"
     document.getElementById("agregarHabitacion").addEventListener("click", () => {
-      mostrarCuadriculaHabitaciones();
+      mostrarCuadriculaHabitaciones(); // Esta función debería estar definida en admin.js
     });
   </script>
 </body>
 </html>
-

@@ -1,6 +1,10 @@
 const express = require('express');
 const path = require('path');
+const favicon = require('serve-favicon'); 
 const app = express();
+
+app.use(favicon(path.join(__dirname, '../public/img/favicon.ico')));
+
 
 // Configurar la carpeta 'public' para archivos estáticos (CSS, imágenes, etc.)
 app.use(express.static(path.join(__dirname, '../public')));
@@ -8,6 +12,11 @@ app.use(express.static(path.join(__dirname, '../public')));
 // Ruta para la página de inicio de sesión
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'views/login.html'));
+});
+
+// Ruta para la página de solicitud de residencia
+app.get('/solicitud_residencia', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views/solicitud_residencia.html'));
 });
 
 // Rutas para el administrador
@@ -39,23 +48,30 @@ app.get('/dashboard_estudiante', (req, res) => {
   res.sendFile(path.join(__dirname, 'views/dashboard_estudiante.html'));
 });
 
-// Ruta para la página de pagos del residente
-app.get('/pagos_estudiante', (req, res) => {
-  res.sendFile(path.join(__dirname, 'views/pagos_estudiante.html'));
+
+app.get('/perfil_estudiante', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views/perfil_estudiante.html'));
 });
 
-// Ruta para la página de solicitudes del residente
-app.get('/solicitudes_estudiante', (req, res) => {
-  res.sendFile(path.join(__dirname, 'views/solicitudes_estudiante.html'));
-});
-
-// Ruta para la página de error 404
-app.use((req, res) => {
-  res.status(404).sendFile(path.join(__dirname, 'views/404.html'));
-});
 
 // Configurar el puerto
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`Servidor corriendo en el puerto ${PORT}`);
+console.log(`Servidor corriendo en el puerto ${PORT}`);
+});
+
+
+// Ruta para la página de inicio de sesión
+app.get('/login', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views/login.html'));
+});
+
+app.get('/perfil', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views/perfil.html'));
+});
+
+
+// Ruta para la página de error 404
+app.use((req, res) => {
+  res.status(404).sendFile(path.join(__dirname, 'views/404.html'));
 });

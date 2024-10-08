@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!--
+  @descripcion: Página de solicitud de residencia para estudiantes.
+  Permite al usuario ingresar sus datos personales, seleccionar el número de habitaciones, 
+  y enviar una solicitud de residencia. La página también ofrece la opción de seleccionar 
+  una estancia indefinida y agregar comentarios adicionales.
+  -->
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!--
+  @titulo: Solicitud de Residencia - Universidad Laica Eloy Alfaro de Manabí
+  -->
+  <title>Solicitud de Residencia</title>
+  
+  <!--
+  @estilos: Archivo CSS específico para el estilo de la página de solicitud.
+  Define el diseño visual de la interfaz del formulario y sus componentes.
+  -->
+  <link rel="stylesheet" href="/css/solicitud_residencia.css">
+  
+  <!-- Icono de la página -->
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <!--
+  @header: Contiene el encabezado principal de la página con el título.
+  Muestra el título de la sección como "Solicitud de Residencia".
+  -->
+  <header class="header">
+    <h1>Solicitud de Residencia</h1>
+  </header>
+  
+  <!--
+  @solicitud-container: Contenedor principal del formulario de solicitud de residencia.
+  Incluye los campos para el ingreso de información personal y detalles de la residencia solicitada.
+  -->
+  <div class="solicitud-container">
+    
+    <!-- Formulario de solicitud de residencia -->
+    <form id="solicitudForm">
+      <!-- Grupo de entrada: Nombre -->
+      <div class="input-group">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required>
+      </div>
+      
+      <!-- Grupo de entrada: Apellido -->
+      <div class="input-group">
+        <label for="apellido">Apellido</label>
+        <input type="text" id="apellido" name="apellido" placeholder="Ingrese su apellido" required>
+      </div>
+      
+      <!-- Grupo de entrada: Correo Electrónico -->
+      <div class="input-group">
+        <label for="email">Correo Electrónico</label>
+        <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+      </div>
+      
+      <!-- Grupo de selección: Número de Habitaciones -->
+      <div class="input-group">
+        <label for="habitaciones">Número de Habitaciones</label>
+        <select id="habitaciones" name="habitaciones">
+          <option value="1">1 Habitación</option>
+          <option value="2">2 Habitaciones</option>
+          <option value="3">3 Habitaciones</option>
+        </select>
+      </div>
+      
+      <!-- Grupo de selección: Fechas de inicio y fin -->
+      <div class="input-group fecha-wrapper">
+        <!-- Fecha de inicio -->
+        <div class="fecha-inicio">
+          <label for="fechaInicio">Fecha de inicio</label>
+          <input type="date" id="fechaInicio" name="fechaInicio" required>
+        </div>
+        
+        <!-- Fecha de fin y opción de tiempo indefinido -->
+        <div class="fecha-fin">
+          <label for="fechaFin">Fecha de fin</label>
+          <input type="date" id="fechaFin" name="fechaFin">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" id="indefinido" name="indefinido">
+            <label for="indefinido">Tiempo indefinido</label>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Grupo de entrada: Comentarios adicionales -->
+      <div class="input-group">
+        <label for="comentarios">Comentarios adicionales</label>
+        <textarea id="comentarios" name="comentarios" placeholder="Escriba aquí..."></textarea>
+      </div>
+      
+      <!-- Botón para enviar la solicitud -->
+      <button type="submit" class="btn-primary">Enviar Solicitud</button>
+      
+      <!-- Botón para regresar al login -->
+      <button type="button" id="backButton" class="btn-secondary">Regresar al Login</button>
+    </form>
+    
+    <!-- Mensaje de confirmación de envío -->
+    <div id="confirmationMessage" class="confirm-msg" style="display: none;">
+      ¡Solicitud enviada! Te notificaremos a tu correo.
+    </div>
+    
+  </div>
+
+  <!--
+  @footer: Pie de página que incluye información legal y derechos reservados.
+  -->
+  <footer class="footer">
+    <p>Universidad Laica Eloy Alfaro de Manabí - Todos los derechos reservados</p>
+  </footer>
+
+  <!--
+  @scripts: Enlace al archivo JavaScript que gestiona la lógica del formulario.
+  Controla la validación, el envío del formulario y la visualización de mensajes.
+  -->
+  <script src="/js/solicitud_residencia.js"></script>
+
+</body>
+</html>

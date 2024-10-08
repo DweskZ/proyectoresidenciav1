@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!--
+  Archivo HTML que representa la vista del perfil del usuario en la interfaz de gestión de la residencia estudiantil.
+  Muestra información del perfil, habitación asignada, pagos pendientes y la actividad reciente del usuario.
+  -->
+  
+  <meta charset="UTF-8"> <!-- Codificación de caracteres UTF-8 para admitir caracteres especiales -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace que el diseño sea responsive -->
+  
+  <!-- Título de la página que aparece en la pestaña del navegador -->
+  <title>Perfil de Usuario</title>
+
+  <!-- Enlace al archivo CSS para los estilos específicos del perfil del estudiante -->
+  <link rel="stylesheet" href="/css/perfil_estudiante.css">
+  
+  <!-- Favicon que aparecerá en la pestaña del navegador -->
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <!-- Contenedor principal que incluye toda la estructura de la página -->
+  <div class="container">
+
+    <!-- Sección de encabezado del perfil -->
+    <div class="profile-header">
+      <!-- Imagen de avatar del usuario -->
+      <img src="/img/profile-icon.png" alt="Avatar" class="profile-avatar">
+      
+      <!-- Nombre y correo del usuario -->
+      <h2>Nombre del Usuario</h2> <!-- Muestra el nombre del usuario (puede ser dinámico) -->
+      <p>Correo Electrónico: usuario@dominio.com</p> <!-- Muestra el correo electrónico (puede ser dinámico) -->
+      
+      <!-- Botón para editar el perfil -->
+      <button class="edit-btn">Editar Perfil</button>
+      
+      <!-- Botón para volver al dashboard del estudiante -->
+      <button class="back-btn" onclick="window.location.href='/dashboard_estudiante'">Volver al Dashboard</button>
+    </div>
+
+    <!-- Sección que muestra estadísticas del perfil del usuario -->
+    <div class="profile-stats">
+      <!-- Tarjetas con la información importante del perfil -->
+      <div class="stat-card">
+        <h3>Habitación Asignada</h3>
+        <p>101</p> <!-- Información de la habitación asignada -->
+      </div>
+      
+      <div class="stat-card">
+        <h3>Pagos Pendientes</h3>
+        <p>2</p> <!-- Número de pagos pendientes -->
+      </div>
+      
+      <div class="stat-card">
+        <h3>Solicitudes Activas</h3>
+        <p>1</p> <!-- Número de solicitudes activas del usuario -->
+      </div>
+    </div>
+
+    <!-- Sección de actividad reciente -->
+    <div class="recent-activity">
+      <h2>Actividad Reciente</h2> <!-- Título de la sección -->
+      <ul>
+        <!-- Lista de eventos recientes -->
+        <li>Solicitud de mantenimiento enviada el 10 de septiembre.</li>
+        <li>Pago de la mensualidad realizado el 5 de septiembre.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Enlace al archivo JavaScript para manejar la lógica de la página de perfil -->
+  <script src="/js/perfil_estudiante.js"></script>
+</body>
+</html>
